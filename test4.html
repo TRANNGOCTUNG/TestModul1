@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border: 1px solid black"></canvas>
+</body>
+<script>
+  class Rectangle{
+    constructor(x,y,width,height,color) {
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+      this.color = color;
+    }
+    getX(){
+      return this.x;
+    }
+    getY(){
+      return this.y;
+    }
+    getWidth(){
+      return this.width;
+    }
+    getHeight(){
+      return this.height;
+    }
+    getColor(){
+      return this.color;
+    }
+    setX(value){
+      this.x = value;
+    }
+    setY(value){
+      this.y = value;
+    }
+    setWidth(value){
+      this.width = value;
+    }
+    setHeight(value){
+      this.height = value;
+    }
+    setColor(value){
+      this.color = value;
+    }
+  }
+  let render = new Rectangle(10,10,200,100,"#000000");
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.fillStyle = render.color;
+  ctx.fillRect(render.x, render.y, render.getWidth(), render.getHeight());
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một hàm kiểm tra chuỗi có nằm trong chuỗi còn lại không</title>
+</head>
+<body>
+
+</body>
+<script>
+function check_string(str,sub){
+    let i;
+    let j;
+    for(i = 0; i < sub.length; i++){
+        for(j = 0; j < str.length; j++){
+            if(str[j] === sub[i + j]){
+               continue;
+            } else{
+                break;
+            }
+        }
+        if (j === str.length){
+            return true;
+        }
+    }
+    return false
+}
+console.log(check_string("Morning","Good Morning"));
+</script>
+</html>
